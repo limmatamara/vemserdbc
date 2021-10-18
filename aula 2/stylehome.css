@@ -1,0 +1,100 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #E0FFFF;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Cabeçalho comum à todas as páginas */
+header {
+    padding-top: 20px;
+    background-color: #4682B4;
+    
+}
+
+header p {
+    font-size: 50px;
+    color: aliceblue;
+    text-align: center;
+}
+
+header img {
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 2%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    background: white;
+    list-style: none;
+    padding: 1%;  
+}
+  
+/*Comum às 3 páginas*/
+.container {
+    width: 1200px;
+    text-align: center;
+    margin: auto;
+}
+
+.container h1, h2 {
+    color: #008080;
+}
+
+.container p {
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
+.container iframe {
+    margin-bottom: 1%;
+}
+
+/*Home*/
+.cogumelos p {
+    margin: auto;
+    margin-top: 1%;
+    width: 15%;
+    padding: 1%;
+    border-radius:10px;
+    background-color: #3CB371;
+    border: 2px solid #4682B4;
+    text-align: center;
+    align-items: center;
+}
+
+.cogumelos img {
+    size: 15px;
+    border-radius: 50%;
+}
+
+
+/*Contato*/
+.questionario {
+   background-color: #fffefe;
+   border: 1px solid #3CB371;
+   width: 400px;
+   padding: 2%;
+   border-radius: 10px;
+   margin: auto;
+}
+
+.questionario label {
+    font-style:inherit;
+    margin-left:3%;
+    color: #4682B4;
+}
+
+.questionario input, select, textarea {
+    border: solid 1.3px #4682B4;
+    padding: 0.2rem;
+}
+
+/*Adress comum às 3 páginas */
+address {
+    text-align: center;
+    margin-bottom: 1%;
+}
+

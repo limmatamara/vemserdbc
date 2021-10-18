@@ -1,0 +1,18 @@
+.conteudo {
+    background-color: aqua;
+}
+
+.conteudo small {
+    background-color: red;
+}
+
+.conteudo  p, h4, span {
+    font-size: 60px;
+    background-color: yellow;
+}
+
+
+
+.conteudo2 h4 {
+    font-size: 20px;
+}
