@@ -1,14 +1,12 @@
 import { Formik, Field, Form, FormikHelpers } from 'formik';
 import {useContext} from 'react';
 import {AuthContext} from '../context/AuthContext';
+import { LoginDTO } from '../model/LoginDTO';
 
-interface LoginDTO {
-  usuario: string,
-  senha: string
-}
+
 
 const Login = () => {
-  const {auth} =useContext<any>(AuthContext);
+  const {handleLogin} =useContext<any>(AuthContext);
   return (
     <div className="container">
       <h1>Login Cogumelo Shop</h1>
@@ -21,11 +19,10 @@ const Login = () => {
           values: LoginDTO,
           { setSubmitting }: FormikHelpers<LoginDTO>
         ) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
+            handleLogin(values);
             setSubmitting(false);
-          }, 500);
-        }}
+          }
+        }
       >
         <Form>
           <div>
@@ -46,3 +43,4 @@ const Login = () => {
 }
 
 export default Login;
+
