@@ -1,0 +1,105 @@
+.cadastroContent {
+  width: 40%;
+  background-color: rgba(255,245,238);
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  border-radius: 8px;
+}
+
+.cadastroContent h1 {
+  color: rgba(255,69,0);
+  margin: 10px;
+  text-align: center;
+}
+
+.campoContent {
+  margin-bottom: 2%;
+  text-align: initial;
+}
+
+.campoContent label {
+  font-weight: bold;
+  margin-left: 5%;
+  margin-right: 2%;
+  color: rgba(255,69,0);
+}
+
+.campoContent input {
+  border: 1px solid rgba(255,69,0);
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.campoContent input:focus {
+  outline: none;
+  background-color: rgba(255,218,185);
+}
+
+.cadastroContent button {
+  margin: 3%;
+  background-color: rgba(255,127,80);
+  border: 1px solid rgba(255,127,80);
+  padding: 5px 20px;
+  color: white;
+  border-radius: 8px;
+}
+
+.cadastroContent button:hover {
+  cursor: pointer;
+  background-color: rgba(152, 251, 152, 0.774);
+  border: 1px solid rgba(152, 251, 152, 0.774);
+}
+
+.pessoas {
+  border: 1px solid rgba(255,69,0);
+  border-radius: 8px;
+  width: 50%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pessoas h1 {
+  color: rgba(255,69,0);
+}
+
+.pessoaContent {
+  text-align: initial;
+  width: 70%;
+  background-color: rgba(255,245,238);
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  border-radius: 8px;
+}
+
+.pessoaContent span {
+  font-weight: bold;
+  margin-right: 2%;
+  margin-left: 5%;
+  color: rgba(255,69,0);
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-around;
+  padding: 3%;
+}
+
+.botoes button {
+  background-color: rgba(255,127,80);
+  border: 1px solid rgba(255,127,80);
+  padding: 5px 20px;
+  color: white;
+  border-radius: 8px;
+}
+
+.botoes button:hover {
+  cursor: pointer;
+  background-color: rgba(255,69,0);
+  border: 1px solid rgba(255,69,0);
+}

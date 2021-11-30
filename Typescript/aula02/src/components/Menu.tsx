@@ -10,6 +10,7 @@ const Menu = () => {
         <ul>
           <li><Link to={"/login"}>Login</Link></li>
           <li><Link to={"/pessoa"}>Pessoa</Link></li>
+          <li><Link to ={"/endereco"}>Endereço</Link></li>
           <li>{ auth && <button onClick = {handleLogout}> Sair</button> } </li>
         </ul>
       </nav>

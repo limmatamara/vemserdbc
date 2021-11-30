@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@100&display=swap');
 
-body {
+body, html {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -11,7 +11,13 @@ code {
   font-family: 'Montserrat', sans-serif;
 }
 
-.container {
+.containerContent {
   max-width: 1200px;
   margin: 0 auto;
+  text-align: center;
+  min-height: calc(100vh - 230px);
+}
+
+.pessoaContent {
+  background-color: aqua;
 }

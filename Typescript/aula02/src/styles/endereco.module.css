@@ -1,0 +1,61 @@
+.endereco {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 5%;
+  width: 50%;
+  margin-bottom: 7%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  background-color: rgba(255,245,238);
+}
+
+.endereco h1 {
+  color: rgba(255,69,0);
+  text-align: center;
+}
+
+.enderecoContent {
+  width: 100%;
+  margin-left: 5%;
+  padding: 0;
+}
+
+.cep {
+  display: flex;
+}
+
+.cep button {
+  background-color: rgba(255,127,80);
+  border: 1px solid rgba(255,127,80);
+  color: white;
+  border-radius: 8px;
+}
+
+.cep button:hover {
+  cursor: pointer;
+  background-color: rgba(152, 251, 152, 0.774);
+  border: 1px solid rgba(152, 251, 152, 0.774);
+}
+
+.endereco label {
+  font-weight: bold;
+  margin-right: 2%;
+  color: rgba(255,69,0);
+}
+
+.endereco input {
+  border: 1px solid rgba(255,69,0);
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 5%;
+  margin-right: 4%;
+}
+
+.endereco input:focus {
+  outline: none;
+  background-color: rgba(255,218,185);
+}
+
+

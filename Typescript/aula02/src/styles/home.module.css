@@ -1,0 +1,41 @@
+.home {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10%;
+}
+
+.home h1 {
+  color: rgba(255,69,0);
+}
+
+.home img {
+  padding: 5px;
+  width: 90%;  
+  border-radius: 50%;
+}
+
+.home button {
+  margin-top: 15%;
+  border: 0px solid rgba(255,127,80);
+  border-radius: 8px;
+  background-color: rgba(255,127,80);
+  padding: 15px 35px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.home button:hover {
+  background-color: rgba(152, 251, 152, 0.774);
+}
+
+.home a {
+  color: white;
+  text-decoration: none;
+}
+
+.login {
+  background-color: rgba(255,245,238);
+  padding: 50px;
+  border: 1px solid rgba(255,218,185);
+  border-radius: 8px;
+}

@@ -1,4 +1,4 @@
-import logo from '../images/Logo.jpg'
+import dog5 from '../images/dog5.jpeg'
 import Menu from './Menu';
 import styles from './Header.module.css'
 
@@ -7,8 +7,13 @@ const Header = () => {
       <header className={styles.header}>
         <div className="container">   
           <div className={styles.contentheader}>    
-            <a href="/"> <img src={logo} alt="Cogumelo"/></a>       
-            <Menu/>
+            <div className={styles.logo}>
+              <a href="/"> <img src={dog5} alt="Cogumelo"/></a>
+              <p>#VemVerDoguinhos</p> 
+            </div>  
+ 
+              <Menu/>
+            
           </div>
         </div>
       </header>

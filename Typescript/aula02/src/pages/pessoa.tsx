@@ -3,6 +3,7 @@ import ApiAxios from "../Api";
 import  { PessoaDTO, PessoasDTO } from '../model/PessoaDTO';
 import { Formik, Field, Form, FormikHelpers, useFormik } from 'formik';
 import LoadList from "../components/LoadList";
+import styles from "../styles/pessoa.module.css"
 
 
 const Pessoa = () => {
@@ -47,73 +48,82 @@ const Pessoa = () => {
   }  
 
   return (
-    <div>
-      <h1>Cadastro</h1>
-      <Formik
-        initialValues = {initialValues}
-        enableReinitialize = {true}      
+    <div className="containerContent">
+      <div className={styles.cadastroContent}>
+        <h1>Cadastro</h1>
+        <Formik
+          initialValues = {initialValues}
+          enableReinitialize = {true}      
 
-        onSubmit={async (values: PessoasDTO,
-          { setSubmitting }: FormikHelpers<PessoasDTO>) => {
-            if (!edit) {
-              await createUser(values);
-            } else {
-              await updateUser(values)
-            }
-            setInitialValues({
-              nome:'',
-              email:'',
-              dataNascimento:'',
-              cpf:'',
-            })
-            setSubmitting(false);
-          }}
-      >
-        <Form>
-          <div>
-            <label htmlFor="nome">Nome</label>
-            <Field id="nome" name="nome" placeholder="Digite seu nome" />
-          </div>
-
-          <div>
-            <label htmlFor="dataNascimento">Data de Nascimento</label>
-            <Field id="dataNascimento" name="dataNascimento" placeholder="Digite sua data de nascimento" />
-          </div>
-
-          <div>
-            <label htmlFor="cpf">CPF</label>
-            <Field id="cpf" name="cpf" placeholder="Digite seu CPF" />
-          </div>
-
-          <div>
-            <label htmlFor="email">Email</label>
-            <Field id="email" name="email" placeholder="Digite seu E-mail" type="email"/>
-          </div>
-
-          {!edit && <button type="submit">Cadastrar</button>}
-          {edit && <button type="submit">Salvar</button>}
-        </Form>
-      </Formik>
-
-      <h1>Pessoa</h1>
-      <div>
-        {listPessoas.map(pessoa => (        
-          <div key={pessoa.idPessoa}>
-            <p>Nome:{pessoa.nome}</p>
-            <p>ID:{pessoa.idPessoa}</p>
-            <p>Data de Nascimento:{pessoa.dataNascimento}</p>
-            <p>CPF:{pessoa.cpf}</p>
-            <p>E-mail:{pessoa.email}</p>         
-
-            <div>
-              <button onClick={() => deleteUser(pessoa.idPessoa)}>Deletar</button>
-              </div>
-            <div>
-              <button onClick={() => readUser(pessoa)}>Editar</button>
+          onSubmit={async (values: PessoasDTO,
+            { setSubmitting }: FormikHelpers<PessoasDTO>) => {
+              if (!edit) {
+                await createUser(values);
+              } else {
+                await updateUser(values)
+              }
+              setInitialValues({
+                nome:'',
+                email:'',
+                dataNascimento:'',
+                cpf:'',
+              })
+              setSubmitting(false);
+            }}
+        >
+          
+          <Form>
+            <div className={styles.campoContent}>
+              <label htmlFor="nome">Nome</label>
+              <Field id="nome" name="nome" placeholder="Digite seu nome" />
             </div>
+
+            <div className={styles.campoContent} >
+              <label htmlFor="dataNascimento">Data de Nascimento</label>
+              <Field id="dataNascimento" name="dataNascimento" placeholder="Digite sua data de nascimento" />
+            </div>
+
+            <div className={styles.campoContent}>
+              <label htmlFor="cpf">CPF</label>
+              <Field id="cpf" name="cpf" placeholder="Digite seu CPF" />
+            </div>
+
+            <div className={styles.campoContent}>
+              <label htmlFor="email">Email</label>
+              <Field id="email" name="email" placeholder="Digite seu E-mail" type="email"/>
+            </div>
+
+            {!edit && <button type="submit">Cadastrar</button>}
+            {edit && <button type="submit">Salvar</button>}
+          </Form>
+        </Formik>
+      </div>
+
+      <div className={styles.pessoas}>
+        <h1>Pessoas</h1>
+          <div>
+            {listPessoas.map(pessoa => (  
+            <div className={styles.pessoaContent}>      
+            <div key={pessoa.idPessoa}>
+              <p><span>Nome:</span>{pessoa.nome} </p>
+              <p><span>ID:</span>{pessoa.idPessoa}</p>
+              <p><span>Data de Nascimento:</span>{pessoa.dataNascimento}</p>
+              <p><span>CPF:</span>{pessoa.cpf}</p>
+              <p><span>E-mail:</span>{pessoa.email}</p>         
+
+              <div className={styles.botoes}>
+                <div>
+                  <button onClick={() => readUser(pessoa)}>Editar</button>
+                </div>
+                <div>
+                  <button onClick={() => deleteUser(pessoa.idPessoa)}>Deletar</button>                  
+                </div>
+              </div>
+            </div>
+            </div>
+            ))}
           </div>
-          ))}
-      </div>  
+      </div> 
     </div>
   );
 }

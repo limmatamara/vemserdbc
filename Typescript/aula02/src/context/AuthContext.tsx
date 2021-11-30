@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
 import ApiAxios from "../Api";
 import { LoginDTO } from "../model/LoginDTO";
-import { useNavigate } from "react-router";
+
 
 
 
@@ -20,20 +20,20 @@ const AuthProvider: React.FC<any>=({ children }) => {
 
   const [auth, setAuth] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
-  const navigate = useNavigate();
 
   const handleLogin = async(user:LoginDTO) => {
       const {data} = await ApiAxios.post('/auth', user);
       localStorage.setItem('token', data);
       ApiAxios.defaults.headers.common['Authorization']= data;
-      navigate('/pessoa');
+      window.location.href = "/pessoa";
       setAuth(true);
   }
 
   const handleLogout = () => {
     localStorage.removeItem('token');
     ApiAxios.defaults.headers.common['Authorization']= '';
-    navigate('/login');
+    window.location.href = "/login";
+   
     setAuth(false);
   }
 
